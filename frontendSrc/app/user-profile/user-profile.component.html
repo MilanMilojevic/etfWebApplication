@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="d-flex justify-content-center mt-3 mb-3 changeData">
+                <form>
+                    <h4>
+                        Promenite podatke
+                    </h4>
+                    <div class="mb-3 mt-3">
+                        <label for="firstname">Ime: </label>
+                        <input type="text" class="form-control" placeholder="Ime" name="firstname"
+                            [(ngModel)]="account.Firstname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastname">Prezime: </label>
+                        <input type="text" class="form-control" placeholder="Prezime" name="lastname"
+                            [(ngModel)]="account.Lastname">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="username">Korisnicko ime: </label>
+                        <input type="text" class="form-control" placeholder="Korisničko ime" name="username"
+                            [(ngModel)]="account.Username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Lozinka: </label>
+                        <input type="password" class="form-control" placeholder="Lozinka" name="password"
+                            [(ngModel)]="account.Password">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email">E-mail: </label>
+                        <input type="text" class="form-control" placeholder="E-mail" name="email"
+                            [(ngModel)]="account.Email">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #fe66c2"
+                            (click)="update()">SAČUVAJ PROMENE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

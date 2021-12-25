@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+<div class='container-fluid'>
+    <div class="row m-3 session-info">
+        <div class="col-12">
+            <div>
+                <h2>Podaci o narednoj sednici</h2>
+                <div *ngFor="let ses of session">
+                    <div class='d-flex'>
+                        <div class="title">{{session[0].Session_Title}}</div>
+                    </div>
+                    <h3>Datum i vreme početka sednice:</h3>
+                    <div class="d-flex">
+                        <div class="time">{{session[0].Start_Date |date:'d/MM/yyyy, HH:mm:ss'}}</div>
+                    </div>
+                    <h3>Datum i vreme završetka sednice:</h3>
+                    <div class="d-flex">
+                        <div class="time">{{session[0].End_Date |date:'d/MM/yyyy, HH:mm:ss'}}</div>
+                    </div>
+                    <h3>Datum i vreme početka glasanja:</h3>
+                    <div class="d-flex">
+                        <div class="time">{{session[0].Start_Voting |date:'d/MM/yyyy, HH:mm:ss'}}</div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary sess-btn" [routerLink]="['/session']">Pristupi
+                    sednici</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row m-3 session-info">
+        <div class="col-12">
+            <h2>Posalji predlog za sledeću sednicu</h2>
+            <h3>Naslov tačke:</h3>
+            <input matInput placeholder="Unesite naslov" name='point_name' [(ngModel)]='point_name'>
+            <h3>Opis tačke:</h3>
+            <div class="textarea">
+                <textarea [(ngModel)]='point_description' placeholder="Unesite opis tačke" name="point_description"
+                    rows="10"></textarea>
+            </div>
+
+            <!-- <button class="btn btn-primary btn-sm">Dodaj dokument</button> -->
+            <button class="btn btn-primary btn-sm" (click)="send()">Pošalji</button>
+        </div>
+    </div>
+</div>

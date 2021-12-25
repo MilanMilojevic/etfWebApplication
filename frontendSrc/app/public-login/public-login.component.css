@@ -1,0 +1,103 @@
+
+
+.header {
+    background-color: #064da9; 
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#wellcome {
+    color: white; 
+    padding: 15px 10px 0px 15px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+.header form {
+    width: 80%;
+}
+
+.body {
+    background-color: #d9d9d9; 
+    border-radius: 10px;
+    padding: 10px 15px 0px 15px;
+}
+
+
+#etfLogo {
+    width: 50px;
+    align-items: center; 
+    padding: 10px 10px 10px 0;
+
+}
+
+#etfHeadline {
+    padding-top: 5px;
+    vertical-align: bottom;
+}
+
+#etfPict img {
+    width: 60%; 
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#etfText {
+    text-align: justify;
+}
+
+.regForm {
+    background-color: #3f81d8; 
+    border-radius: 10px;
+}
+
+.regForm form {
+    padding: 10px; 
+    width: 80%;
+}
+
+.regForm form h2 {
+    color:white;
+}
+
+.section-2 {
+    background-color: #d9d9d9;
+    padding: 15px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+
+
+#public-th, #public-td {
+    padding:5px 40px 15px 0;
+}
+
+#public-th {
+    vertical-align: bottom;
+} 
+
+
+.footer {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    position: relative;
+}
+
+#copyRight {
+    position:relative;
+    text-align:center;
+    justify-content: end;
+} 
+
+#contactInfo {
+    position:relative;
+    text-align:center;
+    justify-content: end;
+}
+
+#map {
+    height: auto;
+}

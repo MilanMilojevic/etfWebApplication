@@ -1,0 +1,14 @@
+.changeData {
+    background-color: #3f81d8; 
+    border-radius: 10px;
+}
+
+.changeData form {
+    padding: 10px; 
+    width: 80%;
+    color:white;
+}
+
+.changeData form h4 {
+    color:white;
+}

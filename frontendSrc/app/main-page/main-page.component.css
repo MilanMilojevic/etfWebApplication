@@ -1,0 +1,45 @@
+.session-info {
+    background-color: #d9d9d9;
+    padding: 15px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.session-info input, textarea{
+    border: none;
+    padding:5px;
+    border-radius: .25rem;
+    color: #495057;
+    width: 100%;
+}
+
+
+
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.time {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: .25rem;
+}
+
+.sess-btn {
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 18px;
+}
+
+button {
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-weight: 500;
+}

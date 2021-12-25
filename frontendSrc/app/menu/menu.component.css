@@ -1,0 +1,87 @@
+.body{
+    height: 10%;
+}
+
+.mainMenu {
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: end; 
+    padding: 15px; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+
+.mainMenu a {
+    color: #064da9;
+}
+
+.mainMenu a:hover {
+    color: #3f81d8;
+}
+
+#navbarNavAltMarkup a:hover {
+    background-color: #3f81d8;
+    color: white;
+    border-radius: 10px;
+}
+
+#navbarNavAltMarkup a:active {
+    background-color: #064da9;
+    color: white;
+    border-radius: 10px;
+}
+
+.navbar {
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.navbar-toggler{
+    outline: none;
+}
+
+.bi-house-fill {
+    color: #064da9;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+#NameLastName {
+    margin-bottom: 10px;
+}
+
+a.nav-item.nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.footer {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    position: relative;
+}
+
+#copyRight {
+    position:relative;
+    text-align:center;
+    justify-content: end;
+} 
+
+#contactInfo {
+    position:relative;
+    text-align:center;
+    justify-content: end;
+}
+
+#map {
+    height: auto;
+}

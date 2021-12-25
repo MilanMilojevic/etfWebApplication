@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <div class="row m-3">
+        <div class="col-12">
+            <table class="table table-sm mt-3">
+                <thead>
+                    <tr class="table-active">
+                        <th scope="col">Reg.broj</th>
+                        <th scope="col">Ime</th>
+                        <th scope="col">Prezime</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Zvanje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let acc of account">
+                        <td class="align-middle">{{acc.Id_Users-1}}</td>
+                        <td class="align-middle">{{acc.Firstname}}</td>
+                        <td class="align-middle">{{acc.Lastname}}</td>
+                        <td class="align-middle"><a href="mailto:mailid">{{acc.Email}}</a></td>
+                        <td class="align-middle">{{acc.Role_Title}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

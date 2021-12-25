@@ -1,0 +1,176 @@
+<header>
+    <div class="container-fluid">
+        <div class="row header m-3">
+            <div class="col-sm-12 col-md-6 col-lg-8" id="wellcome">
+                <h1>
+                    Dobro došli na sajt elektronske sednice
+                </h1>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                <form>
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="Korisničko ime" name="username"
+                            [(ngModel)]="username">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Lozinka" name="password"
+                            [(ngModel)]="password">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #fe66c2"
+                            (click)="login()">PRIJAVI SE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row body m-3">
+        <div class="col-sm-12 col-md-7 col-lg-8">
+            <table>
+                <tr>
+                    <td id="etfLogo">
+                        <img
+                            src="https://www.etf.bg.ac.rs/assets/logo-sr-449e87364798e04e5b9e49e085f8ca26f431ecf6bf7aa458926b23fa1836b640.png">
+                    </td>
+                    <td id="etfHeadline">
+                        <pre><h1>Elektrotehnički fakultet
+Univerziteta u Beogradu</h1></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="etfPict">
+                        <img
+                            src="https://trebadaznas.com/wp-content/uploads/2020/04/Elektrotehni%C4%8Dki-fakultet-Univerzitet-u-Beogradu.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="etfText">
+                        Danas je Elektrotehnički fakultet vrhunska obrazovna i naučna institucija za oblast
+                        elektrotehnike i računarstva, koja obavlja delatnosti za koje je registrovana u skladu sa
+                        Zakonom o visokom obrazovanju, Zakonom o naučno-istraživačkoj delatnosti i drugim važećim
+                        propisima. Delatnosti kojima se bavi Elektrotehnički fakultet preciznije su definisane
+                        Statutom Elektrotehničkog fakulteta i Statutom Univerziteta u Beogradu.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-5 col-lg-4">
+            <div class="d-flex justify-content-center mt-3 mb-3 regForm">
+                <form>
+                    <h2>
+                        Podnesite zahtev za registraciju:
+                    </h2>
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="Ime" name="firstname"
+                            [(ngModel)]="firstname">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Prezime" name="lastname"
+                            [(ngModel)]="lastname">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="Korisničko ime" name="usernameReg"
+                            [(ngModel)]="usernameReg">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Lozinka" name="passwordReg"
+                            [(ngModel)]="passwordReg">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="E-mail" name="email" [(ngModel)]="email">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <select class="form-control form-select" placeholder="Zvanje" name="role" [(ngModel)]="role">
+                            <option selected disabled>Odaberite zvanje iz padajuće liste</option>
+                            <option value="5">Saradnik</option>
+                            <option value="4">Asistent</option>
+                            <option value="3">Docent</option>
+                            <option value="2">Vanredni profesor</option>
+                            <option value="1">Redovni profesor</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #fe66c2"
+                            (click)="send()">POŠALJI ZAHTEV</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row section-2 m-3">
+        <div class="col-12">
+            <h2>Važna obaveštenja</h2>
+        </div>
+        <div class="col-12">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Sednice
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <th id="public-th">Naziv sednica</th>
+                                    <th id="public-th">Datum odrzavanja sednice</th>
+                                </tr>
+                                <tr *ngFor="let ses of session">
+                                    <td id="public-td">{{ses.Session_Title}}</td>
+                                    <td id="public-td">{{ses.Start_Date |date:'d/MM/yyyy, HH:mm:ss'}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Katedra
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the second accordion panel. This panel is hidden by
+                            default.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Aktuelnosti
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Čestitke prvoj grupi na uspešnom urađenom zadatku!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
